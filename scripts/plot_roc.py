@@ -1,0 +1,16 @@
+import numpy as np, matplotlib.pyplot as plt
+plt.rcParams.update({"figure.dpi":600,"savefig.dpi":600,"font.size":9})
+fpr = np.linspace(0,1,200)
+tpr_prop = 1 - np.exp(-3.2*fpr) * (1-0.02)
+tpr_base = 1 - np.exp(-1.6*fpr) * (1-0.12)
+fig = plt.figure(figsize=(3.4,2.6)); ax = fig.add_subplot(111)
+ax.plot(fpr,tpr_prop,label="Proposed (multi-modal + DT)")
+ax.plot(fpr,tpr_base,label="Baseline (residual-only)")
+ax.plot([0,1],[0,1],"--",linewidth=1,label="Chance")
+ax.set(xlabel="False Positive Rate", ylabel="True Positive Rate",
+       title="FDI Detection ROC (Illustrative)")
+ax.grid(True, linewidth=0.4, alpha=0.5)
+ax.legend(loc="lower right", frameon=False)
+fig.tight_layout()
+fig.savefig("figures/roc_fdi_dt.png", bbox_inches="tight")
+print("Saved figures/roc_fdi_dt.png")

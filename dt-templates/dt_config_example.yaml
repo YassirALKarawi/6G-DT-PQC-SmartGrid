@@ -1,0 +1,28 @@
+# DT-in-the-loop example configuration (illustrative)
+power_flow_model:
+  feeder_topology: sample_feeder_33bus.yaml
+  sampling_rate_hz: 50
+  noise_model: nominal
+communications:
+  control_slice:
+    class: URLLC
+    scheduler: deterministic
+    deadline_ms: 5
+  telemetry_slice:
+    class: best_effort
+    target_rate_kbps: 256
+security:
+  ids:
+    mode: edge_anomaly
+    features: [residuals, timing, ran_kpis]
+  crypto:
+    posture: PQC_first
+    qkd_on_fiber: true
+experiments:
+  scenarios:
+    - name: stealth_fdi_low_amp
+    - name: bursty_load_peak
+    - name: pacing_attack_control_path
+  outputs:
+    - roc_curves
+    - deadline_miss_vs_load

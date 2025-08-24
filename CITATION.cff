@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+title: "AI-Enabled & Quantum-Resilient Cybersecurity (6G + DT) — Artifacts"
+message: "If you use this repository, please cite it as below."
+type: software
+authors:
+  - family-names: Al-Karawi
+    given-names: Yassir
+    affiliation: University of Diyala
+    email: yassir_al-karawi_eng@uodiyala.edu.iq
+license: MIT
+version: 1.0.0
+repository-code: https://github.com/YassirALKarawi/6G-DT-PQC-SmartGrid
+doi: 10.5281/zenodo.TBD
+date-released: 2025-08-24
