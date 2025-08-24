@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.16935789.svg)](https://doi.org/10.5281/zenodo.16935789)
+
 # AI-Enabled & Quantum-Resilient Cybersecurity (6G + DT) — Artifacts
 
 Reproducible artifacts for the IEEE Communications Magazine article:
